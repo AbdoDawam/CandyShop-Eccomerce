@@ -1,0 +1,17 @@
+.scrollable-table {
+  max-width: 15rem; /* Set the maximum height for the scrollable area */
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+/* Custom scrollbar styling */
+.scrollable-table::-webkit-scrollbar {
+  height: 10px;
+}
+
+.scrollable-table::-webkit-scrollbar-thumb {
+  @apply bg-secondary; /* Scrollbar thumb color */
+  border-radius: 6px; /* Rounded border radius for the thumb */
+}
+
+.scrollable-table::-webkit-scrollbar-track {
+  background-color: rgba(200, 163, 123, 0.2); /* Scrollbar thumb color */
+}

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico:regular');
+@import url('https://fonts.googleapis.com/css?family=Kurale:regular');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Pacifico, system-ui, -apple-system, sans-serif;
+}
+.special-heading {
+  position: relative;
+  font-size: 26px;
+  width: fit-content;
+  @apply text-primary;
+}
+.special-heading::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+  right: -50px;
+  @apply bg-secondary;
+}
+.special-heading::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+  left: -50px;
+  @apply bg-secondary;
+}
+input[type='checkbox']:checked {
+  @apply bg-secondary;
+}
+table thead th {
+  @apply px-14 py-5 text-center text-primary;
+}
+table tbody td {
+  @apply text-center pb-3 border-b-[1px] border-secondary py-5;
+}
+.checkout-btn {
+  position: relative;
+  padding: 7px 15px;
+}
+.checkout-btn:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.checkout-btn:hover::before {
+  width: 100%;
+  height: 100%;
+}
+.checkout-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + 0.3rem);
+  height: calc(100% + 0.3rem);
+  border: 1px solid #c8a37b;
+  transition: 0.3s;
+}
+.checkout-btn::before {
+  content: '';
+  transition: 0.3s;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: calc(100% + 0.3rem);
+  height: calc(100% + 0.3rem);
+  border: 1px solid #c8a37b;
+}

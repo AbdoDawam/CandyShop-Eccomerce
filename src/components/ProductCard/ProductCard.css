@@ -1,0 +1,13 @@
+.card {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.add {
+  transition: 0.3s;
+}
+.add:hover {
+  @apply bg-thirdly text-secondary;
+}
